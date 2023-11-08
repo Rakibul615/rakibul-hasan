@@ -17,8 +17,9 @@ use App\Http\Controllers\ManagingTask;
 Route::get('/', [ManagingTask::class, 'index'])->name('index');
 Route::get('/create', [ManagingTask::class, 'create'])->name('create');
 Route::post('/store', [ManagingTask::class, 'store'])->name('store');
+Route::get('/edit/{id}', [ManagingTask::class, 'edit'])->name('edit');
 Route::get('/update', [ManagingTask::class, 'update'])->name('update');
-Route::get('/delete', [ManagingTask::class, 'create'])->name('delete');
+Route::get('/delete/{id}', [ManagingTask::class, 'create'])->name('delete');
 
 Route::middleware([
     'auth:sanctum',

@@ -23,7 +23,7 @@
                             <div class="row mb-3">
                                 <label for="" class="col-md-3"> Completed</label>
                                 <div class="col-md-9">
-                                    <input type="hidden" name="bool" value="0">
+                                    <input type="boolean" name="bool" value="">
 
                                 </div>
                             </div>

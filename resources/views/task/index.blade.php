@@ -7,6 +7,7 @@
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Completed</th>
+            <th scope="col">Action</th>
 
         </tr>
         </thead>
@@ -17,6 +18,10 @@
                 <td>{{$detail->title}}</td>
                 <td>{{$detail->description}}</td>
                 <td>{{$detail->completed}}</td>
+                <td>
+                    <a href="{{route('edit', ['id' => $detail->id])}}" class="btn btn-info btn-sm ">Edit</a>
+                    <a href="{{route('delete', ['id' => $detail->id])}}" class="btn btn-warning btn-sm ">Delete</a>
+                </td>
 
             </tr>
         @endforeach

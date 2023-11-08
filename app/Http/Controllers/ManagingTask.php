@@ -11,7 +11,7 @@ class ManagingTask extends Controller
     public $info;
     public function index()
     {
-        $this->info = Task::get();
+       $this->info = Task::get();
         return view('task.index', ['details' =>  $this->info]);
     }
     public function create()
@@ -24,11 +24,17 @@ class ManagingTask extends Controller
         Task::storeInfo($request);
         return view('task.store');
     }
+    public function edit($id)
+    {
+        $this->info = Task::find($id);
+        return view('task.edit', ['info' =>  $this->info]);
+    }
     public function update()
     {
         return view('task.update');
     }
-    public function delete()
+
+    public function delete($id)
     {
 
     }
