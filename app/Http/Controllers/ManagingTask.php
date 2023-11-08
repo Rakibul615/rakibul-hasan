@@ -28,14 +28,18 @@ class ManagingTask extends Controller
     {
         $this->info = Task::find($id);
         return view('task.edit', ['info' =>  $this->info]);
+
     }
-    public function update()
+
+    public function update(Request $request, $id)
     {
-        return view('task.update');
+        Task::updateInfo($request,$id);
     }
 
     public function delete($id)
     {
+        $this->info = Task::find($id);
+        $this->info->delete();
 
     }
 }

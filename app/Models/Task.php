@@ -20,4 +20,15 @@ class Task extends Model
         return self::$product;
 
     }
+
+    public  static  function updateInfo($request , $id)
+    {
+        self::$product = Task::find($id);
+        self::$product->title = $request->title;
+        self::$product->description = $request->description;
+        self::$product->completed = $request->bool;
+        self::$product->update();
+        return self::$product;
+
+    }
 }
