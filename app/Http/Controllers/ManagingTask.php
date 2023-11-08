@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 
 class ManagingTask extends Controller
 {
+    public $info;
     public function index()
     {
-        return view('task.index');
+        $this->info = Task::get();
+        return view('task.index', ['details' =>  $this->info]);
     }
     public function create()
     {
