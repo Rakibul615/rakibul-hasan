@@ -10,7 +10,7 @@
                             <div class="row mb-3">
                                 <label for="" class="col-md-3"> Title</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" name="name">
+                                    <input type="text" class="form-control" name="title">
                                 </div>
                             </div>
 
@@ -23,8 +23,7 @@
                             <div class="row mb-3">
                                 <label for="" class="col-md-3"> Completed</label>
                                 <div class="col-md-9">
-                                    <label ><input type="radio" checked value="True" name="bool"> True</label>
-                                    <label ><input type="radio"  value="False" name="bool">False</label>
+                                    <input type="hidden" name="bool" value="0">
 
                                 </div>
                             </div>

@@ -18,7 +18,7 @@ class ManagingTask extends Controller
     }
     public function store(Request $request)
     {
-//        return $request;
+//       return $request;
         Task::storeInfo($request);
         return view('task.store');
     }

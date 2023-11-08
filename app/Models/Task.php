@@ -17,6 +17,7 @@ class Task extends Model
         self::$product->description = $request->description;
         self::$product->completed = $request->bool;
         self::$product->save();
+        return self::$product;
 
     }
 }
